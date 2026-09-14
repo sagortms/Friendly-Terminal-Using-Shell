@@ -1,0 +1,39 @@
+# All gitattributes file
+# ==========================================
+# 1. AUTO-DETECT & NORMATIVE LINE ENDINGS
+# ==========================================
+# Set default behavior for all files to auto-detect text vs binary
+* text=auto
+
+# ==========================================
+# 2. SHELL & BASH SCRIPTS (MUST USE LF)
+# ==========================================
+# Force Unix line endings (LF) for shell scripts to prevent breakage on Linux/Mac
+*.sh text eol=lf
+*.bash text eol=lf
+*.zsh text eol=lf
+
+# ==========================================
+# 3. WINDOWS BATCH SCRIPTS (MUST USE CRLF)
+# ==========================================
+# Force Windows line endings (CRLF) for Windows command scripts
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# ==========================================
+# 4. BINARY FILES (DO NOT MODIFY LINE ENDINGS)
+# ==========================================
+# Prevent Git from modifying binary formats (Images, Archives, Fonts)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.tar.gz binary
+*.exe binary
+*.dll binary
+*.so binary
+*.dylib binary
