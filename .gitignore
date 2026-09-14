@@ -1,0 +1,224 @@
+# All gitignore files
+# ==========================================
+# 1. SECURITY, SECRETS & ENVIRONMENT VARIABLES
+# ==========================================
+.env                                  # Environment variables file (contains passwords, API keys)
+.env.*                                # Target all variations of env files (e.g. .env.local, .env.production)
+!.env.example                         # Keep example file so developers know required variables
+!.env.template                        # Keep template file as setup guide
+*.pem                                 # Private SSL/TLS Certificates & RSA keys
+*.key                                 # Private Encryption Keys
+*.crt                                 # SSL Certificate files
+*.pfx                                 # Personal Information Exchange PKCS#12 certificates
+*.keystore                            # Android release key stores
+id_rsa                                # SSH Private keys
+id_rsa.pub                            # SSH Public keys
+
+# ==========================================
+# 2. OPERATING SYSTEM JUNK FILES
+# ==========================================
+# macOS
+.DS_Store                             # macOS Finder desktop services store (folder layout metadata)
+.AppleDouble                          # Apple Double resource fork metadata files
+.LSOverride                           # Launch Services override configurations
+._*                                   # AppleDouble shadow files created on non-HFS filesystems
+.DocumentRevisions-V100               # macOS document revisions directory
+.fseventsd                            # macOS file system events logging directory
+.Spotlight-V100                       # Spotlight indexing database folder
+.Trashes                              # macOS user trash folder on external drives
+.VolumeIcon.icns                      # Custom volume icons
+.com.apple.timemachine.donotpresent   # Prevents Time Machine from backing up specific drives
+
+# Windows
+Thumbs.db                             # Windows Explorer thumbnail cache database
+Thumbs.db:encryptable                 # Encrypted thumbnail database streams
+ehthumbs.db                           # Windows Media Center thumbnail cache
+ehthumbs_vista.db                     # Windows Vista Media Center thumbnail cache
+Desktop.ini                           # Windows folder customization configuration file
+$RECYCLE.BIN/                         # Windows system recycling bin directory
+*.stackdump                           # Windows application crash stack traces
+*.lnk                                 # Windows desktop shortcuts
+*.desktop                             # Linux desktop application configuration files
+
+# Linux
+*~                                    # Temporary backup files created by Linux editors
+.fuse_hidden*                         # Temporary files created by FUSE file systems
+.directory                            # KDE desktop folder view settings file
+.Trash-*                              # Linux Trash bin directories
+.nfs*                                 # Network File System (NFS) temporary lock files
+
+# ==========================================
+# 3. CODE EDITORS, IDEs & AI TOOLS
+# ==========================================
+# VS Code & Cursor AI
+.vscode/                              # VS Code editor-specific settings and state
+!.vscode/settings.json                # Retain team settings if committed
+!.vscode/tasks.json                   # Retain automated task configurations
+!.vscode/launch.json                 # Retain debugging configurations
+!.vscode/extensions.json             # Retain recommended extensions list
+*.code-workspace                      # VS Code workspace structure file
+.history/                             # Local file history extension data
+.cursor/                              # Cursor AI editor local state directory
+.cursorrules                          # Optional Cursor rules (uncomment if you want to exclude local rules)
+
+# Code::Blocks
+*.depend                              # Code::Blocks internal file dependencies tracker
+*.layout                              # Code::Blocks user window layout and open editor tab metadata
+*.cbp.user                            # Code::Blocks user-specific project target settings
+*.objs/                               # Code::Blocks compiled object files directory
+*.bin/                                # Code::Blocks compiled binary outputs directory
+
+# JetBrains (PyCharm, IntelliJ, WebStorm, Android Studio, PhpStorm, CLion, GoLand)
+.idea/                                # JetBrains internal project metadata folder
+*.iws                                 # JetBrains workspace properties file
+*.iml                                 # JetBrains module file
+*.ipr                                 # JetBrains project configuration file
+out/                                  # Default JetBrains compilation output folder
+
+# AI & Developer Tools (Claude, Codex, Antigravity, Copilot, Windsurf, Devin)
+.claude/                              # Claude CLI / agent local cache and session state directory
+.claude-dev/                          # Claude Dev extension cache and temporary settings
+.codex/                               # OpenAI Codex local configuration and state directory
+.antigravity/                         # Google Antigravity local agent workspace metadata
+.copilot/                             # GitHub Copilot local workspace settings and cache
+.windsurf/                            # Windsurf AI editor local cache and state
+.devin/                               # Devin AI agent workspace cache files
+.ollama/                              # Ollama local model running cache
+.lmstudio/                            # LM Studio local metadata and cache
+
+# Vim / Neovim / Emacs
+.*.sw[a-z]                            # Vim swap buffer files for active edits
+*.un~                                 # Vim undo history files
+Session.vim                           # Saved Vim editor sessions
+.netrwhist                            # Vim directory browser file history
+*#*                                   # Auto-saved file buffers
+.#*                                   # Emacs lock files pointing to open buffers
+
+# Visual Studio / Sublime Text
+.vs/                                  # Visual Studio local solution settings
+*.suo                                 # Visual Studio user options file
+*.user                                # Visual Studio personal project options
+*.userosv                             # Visual Studio OS-specific settings
+*.sln.docstates                       # Visual Studio open documents state
+*.sublime-workspace                   # Sublime Text workspace layout
+*.sublime-project                     # Sublime Text project settings
+
+# ==========================================
+# 4. LOGS, TEMPORARY & BACKUP FILES
+# ==========================================
+*.log                                 # System, application, and execution log files
+logs/                                 # General application log storage directory
+*.sys                                 # System driver and dump files
+*.tmp                                 # Temporary system files
+*.bak                                 # Backup files created by manual edits or tools
+*.swp                                 # General swap files
+*.pid                                 # Process ID tracker files for running services
+*.seed                                # Random number generator seed files
+*.pid.lock                            # Lockfiles ensuring single-instance execution
+
+# ==========================================
+# 5. NODE.JS / JAVASCRIPT / TYPESCRIPT
+# ==========================================
+node_modules/                         # NPM and Yarn downloaded package dependencies folder
+jspm_packages/                        # JSPM client-side package directory
+bower_components/                     # Legacy Bower frontend packages
+.npm/                                 # Local NPM cache folder
+.eslintcache                          # ESLint speed optimization caching file
+.stylelintcache                       # Stylelint cache file
+.node_repl_history                    # History of commands run inside Node.js REPL
+*.tgz                                 # Tarball packages created by npm pack
+*.yarn-integrity                      # Yarn dependency verification file
+.yarn/cache                           # Yarn v2+ offline package cache
+.yarn/unplugged                       # Yarn v2+ unzipped packages
+.next/                                # Next.js production build output directory
+.nuxt/                                # Nuxt.js production build output directory
+dist/                                 # Transpiled and bundled distribution files
+build/                                # Production build assets folder
+
+# ==========================================
+# 6. PYTHON
+# ==========================================
+__pycache__/                          # Python compiled bytecode cache directories
+*.py[cod]                             # Python compiled files (.pyc, .pyo, .pyd)
+*$py.class                            # Jython compiled Java class files
+*.so                                  # C-extensions compiled binaries for Python
+.Python                               # Python core environment marker file
+env/                                  # Python virtual environment directory
+venv/                                 # Default virtual environment folder
+ENV/                                  # Alternative virtual environment name
+env.bak/                              # Virtual environment backup folder
+venv.bak/                             # Backup of venv virtual environment
+.venv/                                # Hidden virtual environment folder
+.pytest_cache/                        # PyTest execution cache directory
+.coverage                             # Python code coverage output metrics
+htmlcov/                              # HTML report files generated by Coverage.py
+.mypy_cache/                          # MyPy static type check analysis cache
+.ruff_cache/                          # Ruff Python linter cache directory
+*.egg-info/                           # Python library metadata directory
+.eggs/                                # Temporary egg files created during package builds
+
+# ==========================================
+# 7. BASH & SHELL SCRIPTS
+# ==========================================
+.bash_history                         # Saved history of executed Bash commands
+.zsh_history                          # Saved history of executed Zsh commands
+.bash_profile                         # User environment startup configuration
+.bashrc                               # Interactive Bash runtime settings
+.sh_history                           # Generic Shell command history
+*.sh.bak                              # Backup files generated during script edits
+sh.err                                # Standard error dump files from background execution
+sh.out                                # Standard output log files from background scripts
+
+# ==========================================
+# 8. JAVA / KOTLIN / GRADLE / MAVEN
+# ==========================================
+*.class                               # Compiled Java bytecode files
+*.jar                                 # Java Archive executable packages
+*.war                                 # Web Application Archive packages
+*.ear                                 # Enterprise Application Archive packages
+*.nar                                 # Native Archive packages
+*.rar                                 # Resource Adapter Archive packages
+target/                               # Maven output distribution folder
+.gradle/                              # Gradle internal working cache directory
+bin/                                  # Compiled binary outputs directory
+
+# ==========================================
+# 9. C / C++ / GO / RUST
+# ==========================================
+*.o                                   # Compiled C/C++ object code files
+*.obj                                 # MSVC compiled object files
+*.out                                 # Default executable output files
+*.app                                 # macOS compiled application bundles
+*.exe                                 # Windows standalone executable binaries
+*.dll                                 # Windows Dynamic Link Libraries
+*.dylib                               # macOS Dynamic Libraries
+*.a                                   # Static library files
+*.lib                                 # MSVC static library files
+*.history                             # Command line editor state files
+# Go
+/vendor/                              # Go vendor folder created by go mod vendor
+# Rust
+/target/                              # Cargo build compilation target folder
+
+# ==========================================
+# 10. DOCKER & CI/CD PIPELINES
+# ==========================================
+.docker/                              # Local Docker configuration directory
+docker-compose.override.yml           # Local dev environment overrides for Docker Compose
+*.dev.env                             # Local development environment definitions
+.trivy/                               # Trivy security vulnerability scanner cache
+.sonar/                               # SonarQube code quality analysis cache
+.gitlab-ci.yml.cache                  # GitLab CI/CD runner local cache folder
+
+# ==========================================
+# 11. MOBILE DEV (FLUTTER / ANDROID / IOS)
+# ==========================================
+.flutter-plugins                      # Flutter plugin path mappings
+.flutter-plugins-dependencies         # Internal Flutter dependencies mapping file
+.dart_tool/                           # Dart language execution cache and build folder
+.pub-cache/                           # Package resolution cache for Flutter/Dart
+.pub/                                 # Intermediate build artifacts for Dart web projects
+android/.gradle                       # Android Studio local Gradle build cache
+android/captures/                     # Profiler capture dumps for Android Studio
+ios/Pods/                             # CocoaPods downloaded libraries for iOS
+ios/.symlinks/                        # Flutter iOS framework symlinks
